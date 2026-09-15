@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/index.css">
+    <script src="./scripts/hamburger-menu.js"></script>
+    <title>Main Page</title>
+</head>
+
+<body>
+    <div id="wrap">
+        <!-------------------------------------------------HEADER------------------------------------------------->
+        <header>
+            <!---------------------------------------------HEADER MAIN--------------------------------------------->
+            <div id="headerMainContainer">
+                <div id="iconNameContainer">
+                    <img src="./images/truckicon.png" alt="Company logo">
+                </div>
+                <div class="companyNameContainer">
+                    <p>Grönfrakt AB</p>
+                </div>
+                <button onclick="clickFunction()" id="headerButton">≡
+                </button>
+            </div>
+            <!---------------------------------------------HEADER NAV--------------------------------------------->
+            <div id="headerNavBar">
+                <ol class="navList">
+                    <li><a href="index.html">Hemsida</a></li>
+                    <li><a href="price-calculator.html">Prisuträknare</a></li>
+                    <li><a href="about.html">Om oss</a></li>
+                </ol>
+            </div>
+        </header>
+        <!------------------------------------------------IMAGE BOX------------------------------------------------>
+        <div id="imageBox">
+            <img class="mainImage" src="./images/company.webp" alt="">
+            <div id="effectDiv"></div>
+        </div>
+        <!--------------------------------------------------MAIN-------------------------------------------------->
+        <main>
+            <!---------------------------------------------ABOUT TEXT--------------------------------------------->
+            <div class="aboutTextContainer">
+                <h1 id="aboutHeader">Om oss:</h1>
+                <p id="aboutText">Grönfrakt AB är ett modernt transport- och logistikföretag med fokus på
+                    hållbarhet, kvalitet och
+                    pålitliga leveranser. Vi hjälper företag och privatpersoner att transportera gods på ett
+                    smidigt, säkert och miljömedvetet sätt – oavsett om det gäller lokala distributioner eller
+                    längre transporter över hela landet. Vår målsättning är att kombinera effektiv logistik med
+                    minskad miljöpåverkan, utan att kompromissa med service eller leveransprecision.
+                    Genom smart ruttplanering, digital uppföljning och en växande fordonsflotta med el- och
+                    miljöklassade fordon arbetar vi aktivt för att minska utsläpp och skapa mer hållbara
+                    transporter. Vi tror att framtidens fraktlösningar kräver både teknisk innovation och personligt
+                    engagemang, därför satsar vi på moderna system samtidigt som vi värnar om nära kundrelationer.
+                    Våra tjänster omfattar allt från bud- och expressleveranser till regelbunden distribution,
+                    lagerhantering och skräddarsydda logistiklösningar för företag. Varje uppdrag planeras noggrant
+                    för att säkerställa att godset når fram i tid och i tryggt skick. Med erfaren personal och ett
+                    serviceinriktat arbetssätt är vi en partner som våra kunder kan lita på – varje dag.
+                    På Grönfrakt AB strävar vi efter att vara mer än bara ett fraktföretag. Vi vill bidra till en
+                    grönare framtid genom hållbara val, långsiktiga samarbeten och ständiga förbättringar i vårt
+                    arbete.</p>
+                <!------------------------------------------CONTACTS TEXT------------------------------------------>
+                <p id="aboutContactHeader">Kontaktuppgifter</p>
+                <p id="aboutContactText"> Grönfrakt AB Industrigatan 12, <br>
+                    417 05 Göteborg Telefon: 031–45 67 80 <br>
+                    E-post: info@gronfraktab.se <br>
+                    Webb: www.gronfraktab.se</p>
+            </div>
+        </main>
+        <!-------------------------------------------------FOOTER------------------------------------------------->
+        <footer>
+            <p>©2026 Grönfrakt AB</p>
+        </footer>
+    </div>
+</body>
+
+</html>

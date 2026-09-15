@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/index.css">
+    <script src="./scripts/hamburger-menu.js"></script>
+    <script src="./scripts/price-calculator.js"></script>
+    <title>Main Page</title>
+</head>
+
+<body>
+    <div id="wrap">
+        <!-------------------------------------------------HEADER------------------------------------------------->
+        <header>
+            <!---------------------------------------------HEADER MAIN--------------------------------------------->
+            <div id="headerMainContainer">
+                <div id="iconNameContainer">
+                    <img src="./images/truckicon.png" alt="Company logo ">
+                </div>
+                <div class="companyNameContainer">
+                    <p>Grönfrakt AB</p>
+                </div>
+                <button onclick="clickFunction()" id="headerButton">
+                    ≡
+                </button>
+            </div>
+            <!---------------------------------------------HEADER NAV--------------------------------------------->
+            <div id="headerNavBar">
+                <ol class="navList">
+                    <li><a href="index.html">Hemsida</a></li>
+                    <li><a href="price-calculator.html">Prisuträknare</a></li>
+                    <li><a href="about.html">Om oss</a></li>
+                </ol>
+            </div>
+        </header>
+        <!------------------------------------------------IMAGE BOX------------------------------------------------>
+        <div id="imageBox">
+            <img class="mainImage" src="./images/package.webp" alt="">
+            <div id="effectDiv"></div>
+        </div>
+        <!--------------------------------------------------MAIN-------------------------------------------------->
+        <main>
+            <div id="mainContainer">
+                <!-----------------------------------------TEXT CONTAINER----------------------------------------->
+                <div id="calculatorTextContainer">
+                    <p>På Grönfrakt AB beräknas fraktpriset utifrån en tydlig och rättvis modell. Varje leverans har ett
+                        fast grundpris för körningar upp till 50 kilometer. För längre sträckor tillkommer en låg
+                        kostnad per extra kilometer, vilket gör att priset ökar linjärt och förutsägbart. Priset
+                        anpassas även efter godsets typ och vikt, så att du bara betalar för den kapacitet som faktiskt
+                        behövs.
+                        Tack vare effektiv ruttplanering, moderna fordon och smart logistik kan vi hålla våra kostnader
+                        nere och erbjuda konkurrenskraftiga priser – ofta lägre än många andra aktörer på marknaden,
+                        utan att tumma på kvalitet eller leveranssäkerhet.</p>
+                </div>
+                <!-----------------------------------------------CALCULATOR----------------------------------------------->
+                <div class="calculatorContainer">
+                    <h1 id="calculatorHeader">Räkna ut ditt pris:</h1>
+                    <div class="calculatorCard card1">
+                        <p class="cardText card1">Vikt:</p>
+                        <div class="cardTextArea card1">
+                            <input name="Weight" class="calculatorInput input1"
+                                oninput="calculateAndOutputNumber(value, 'Weight')">
+                        </div>
+                    </div>
+                    <div class=" calculatorCard card2">
+                        <p class="cardText card2">Distans i Kilometer:</p>
+                        <div class="cardTextArea card2">
+                            <input name="Distance" class="calculatorInput input2"
+                                oninput="calculateAndOutputNumber(value, 'Distance')">
+                        </div>
+                    </div>
+                    <div class="calculatorCard card3">
+                        <p class="cardText card3">Pris:</p>
+                        <div class="cardTextArea card3">
+                            <p id="calculatorOutput"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-------------------------------------------------FOOTER------------------------------------------------->
+        <footer>
+            <p>©2026 Grönfrakt AB</p>
+        </footer>
+    </div>
+</body>
+
+</html>

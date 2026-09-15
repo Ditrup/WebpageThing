@@ -1,0 +1,732 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+}
+
+#wrap {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/*
+<--------------------------------------------------------------------------------------------------->
+                                          Normal Display
+<--------------------------------------------------------------------------------------------------->
+*/
+
+@media (min-width: 800px) {
+  /*<-------------------------------------- UNIVERSAL -------------------------------------->*/
+
+  a:hover {
+    color: rgb(50, 50, 255);
+  }
+
+  /*<---------------------------------------- HEADER ---------------------------------------->*/
+
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    position: sticky;
+    top: 0;
+    max-height: 20%;
+    height: 5rem;
+    z-index: 5;
+    justify-content: space-between;
+    background: rgb(97, 175, 111);
+    width: 100%;
+  }
+
+  #headerMainContainer {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    justify-content: space-between;
+    background: rgb(97, 175, 111);
+    width: 100%;
+  }
+
+  #iconNameContainer {
+    height: 100%;
+    align-self: flex-end;
+    background: rgb(46, 94, 58);
+  }
+
+  #iconNameContainer img {
+    height: 100%;
+    border-radius: 10px;
+  }
+
+  .companyNameContainer {
+    display: flex;
+    height: 100%;
+    width: 75%;
+    justify-content: start;
+    align-items: center;
+    align-self: end;
+  }
+
+  .companyNameContainer p {
+    font-size: 2.5rem;
+  }
+
+  #headerButton {
+    display: flex;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 80px;
+    background-color: rgb(46, 94, 58);
+    font-size: 5rem;
+  }
+
+  #headerButton:hover {
+    background-color: rgb(91, 111, 175);
+    font-size: 5.5rem;
+  }
+
+  #headerNavBar {
+    background: rgb(91, 175, 107);
+    display: flex;
+    height: 0rem;
+    transition: transform 0.25s ease-in-out;
+  }
+
+  #headerNavBar ol {
+    overflow: hidden;
+  }
+
+  .navList li {
+    padding: 0.75rem 1rem;
+    list-style: none;
+    font-size: 2rem;
+  }
+  .navList li:first-child {
+    padding-top: 1rem;
+  }
+
+  .navList li:hover {
+    transform: scale(1.05, 1.05);
+    transition: transform 0.5s linear;
+  }
+
+  /*<---------------------------------------- IMAGE ---------------------------------------->*/
+
+  #imageBox {
+    position: relative;
+    display: flex;
+    min-height: 20%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    z-index: 0;
+  }
+
+  #imageBox .bigImage {
+    width: 100%;
+    overflow: hidden;
+    z-index: 1;
+  }
+
+  #imageBox .smallImage {
+    display: none;
+  }
+
+  .mainImage {
+    width: 100%;
+    height: 30rem;
+    z-index: 1;
+  }
+
+  #effectDiv {
+    position: absolute;
+    top: 80%;
+    height: 20%;
+    width: 110%;
+    z-index: 2;
+    box-shadow: inset 0 -5rem 2rem rgb(242, 237, 228);
+  }
+
+  #imageTextBox {
+    position: absolute;
+    top: 2rem;
+    background: rgb(169, 212, 232);
+    display: flex;
+    border-radius: 1rem;
+    margin: 0;
+    border: 0.25rem solid rgb(199, 239, 180);
+    flex-direction: column;
+    align-items: center;
+    max-width: 40%;
+    min-height: 50%;
+    z-index: 3;
+  }
+
+  #imageBoxQuote {
+    padding: 0.5rem 1rem;
+    font-size: 0.75rem;
+  }
+
+  #imageBoxHeader {
+    margin-right: 55%;
+    font-size: 1.5rem;
+  }
+
+  #imageBoxText {
+    width: 90%;
+    margin-top: 1rem;
+  }
+
+  #imageBoxButton {
+    z-index: 5;
+    padding: 1rem;
+    display: flex;
+    background: rgb(217, 217, 217);
+    border-radius: 1rem;
+    box-shadow: 0 0.25rem 0.75rem rgb(0 0 0 / 0.5);
+    font-size: 1rem;
+    margin: 1rem 0;
+  }
+
+  #imageBoxButton:hover {
+    transform: scale(1.05, 1.05);
+    transition:
+      transform,
+      0.25s ease-in-out;
+    cursor: pointer;
+  }
+
+  /*<---------------------------------------- MAIN ---------------------------------------->*/
+
+  main {
+    background: rgb(242, 237, 228);
+    justify-content: center;
+    display: flex;
+  }
+
+  #mainContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 5rem;
+    margin: 10rem 0;
+    width: 100%;
+  }
+
+  .card {
+    display: flex;
+    justify-content: space-evenly;
+    align-content: end;
+    width: 100%;
+  }
+
+  .card img {
+    overflow: hidden;
+    width: 25rem;
+    height: 20rem;
+    border-radius: 3.5rem;
+    box-shadow: 0 0.25rem 1.25rem rgb(0 0 0 / 0.5);
+  }
+
+  .cardTextContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 50%;
+  }
+  .cardTextContainer h2 {
+    font-size: 2rem;
+    width: 100%;
+  }
+  .cardTextContainer p {
+    font-size: 1.5rem;
+    width: 100%;
+  }
+
+  /*<---------------------------------------- About page ---------------------------------------->*/
+
+  .aboutTextContainer {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #aboutHeader {
+    width: 50rem;
+    text-align: center;
+    font-size: 5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  #aboutText {
+    text-align: start;
+    font-size: 2rem;
+  }
+
+  #aboutContactHeader {
+    font-size: 3rem;
+    margin: 2rem 0 3rem;
+    font-weight: 900;
+  }
+
+  #aboutContactText {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 5rem;
+  }
+
+  /*<---------------------------------------- Price calculator page ---------------------------------------->*/
+
+  .calculatorContainer {
+    display: flex;
+    gap: 1rem;
+    border-radius: 10px;
+    flex-direction: column;
+    background: #a9d4e8;
+    width: 90%;
+    margin: 2rem 0;
+  }
+
+  #calculatorHeader {
+    align-self: center;
+    font-size: 4rem;
+    margin: 1rem 0;
+  }
+
+  .calculatorCard {
+    display: flex;
+    background-color: #6d6d6d;
+    border-radius: 1rem;
+    height: 7.5rem;
+    gap: 0.5rem;
+    align-items: center;
+    overflow: hidden;
+  }
+  .cardText {
+    display: flex;
+    align-items: center;
+    font-size: 2.5rem;
+    background-color: #5baf6b;
+    text-align: left;
+    height: 100%;
+    width: 15rem;
+    padding: 0 2rem;
+  }
+  .cardTextArea {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    height: 100%;
+  }
+
+  .cardTextArea input {
+    background: #5baf6b;
+    font-size: 3rem;
+    text-align: center;
+    border: none;
+    height: 100%;
+    width: 100%;
+  }
+
+  #calculatorOutput {
+    background: #5baf6b;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+  }
+
+  #calculatorTextContainer {
+    width: 90%;
+    font-size: 2.5rem;
+  }
+}
+
+/*
+<--------------------------------------------------------------------------------------------------->
+                                       Phone/Small Display                                        
+<--------------------------------------------------------------------------------------------------->
+*/
+
+@media (max-width: 800px) {
+  /*<---------------------------------------- HEADER ---------------------------------------->*/
+
+  header {
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    top: 0;
+    justify-content: space-between;
+    background: rgb(91, 175, 107);
+    width: 100%;
+    z-index: 5;
+  }
+
+  #headerMainContainer {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #iconNameContainer {
+    height: 5rem;
+    width: 5rem;
+    align-self: center;
+  }
+
+  #iconNameContainer img {
+    height: 100%;
+    border-radius: 1rem;
+  }
+
+  .companyNameContainer {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+  }
+
+  .companyNameContainer p {
+    font-size: 2rem;
+  }
+
+  #headerButton {
+    background: #aff911;
+    display: flex;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    height: 5rem;
+    width: 5rem;
+    font-size: 5rem;
+  }
+
+  #headerNavBar {
+    display: flex;
+    height: 0rem;
+    width: 100%;
+    align-self: flex-end;
+    transition:
+      transform,
+      0s ease-out;
+  }
+
+  #headerNavBar ol {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .navList li {
+    background-color: #2e5e3a;
+    display: flex;
+    padding: 0.75rem 0;
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    width: 100%;
+    height: 5rem;
+    text-align: center;
+  }
+  .navList li:first-child {
+    padding-top: 1rem;
+  }
+
+  .navList li:hover {
+    transform: scale(1.05, 1.05);
+    transition:
+      transform,
+      0.5s linear;
+  }
+
+  /*<---------------------------------------- IMAGE ---------------------------------------->*/
+
+  #imageBox {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 0;
+    overflow: hidden;
+    /* height: 30rem; */
+  }
+
+  #imageBox .bigImage {
+    display: none;
+  }
+
+  #imageBox .smallImage {
+    display: flex;
+    min-height: 40rem;
+    margin-top: 5rem;
+    width: 100%;
+    z-index: 1;
+  }
+
+  .mainImage {
+    width: 50rem;
+    height: 25rem;
+    margin: 1rem 0 0;
+    z-index: 1;
+  }
+
+  #effectDiv {
+    position: absolute;
+    height: 20%;
+    width: 110%;
+    top: 80%;
+    z-index: 3;
+    box-shadow: inset 0 -3rem 2.5rem rgb(242, 237, 228);
+  }
+
+  #imageTextBox {
+    top: 30%;
+    position: absolute;
+    background: rgb(169, 212, 232);
+    display: flex;
+    border-radius: 1rem;
+    border: 0.25rem solid rgb(199, 239, 180);
+    flex-direction: column;
+    align-items: center;
+    min-height: 25%;
+    max-width: 75%;
+    width: 75%;
+    margin: 0 0 10rem 0;
+    z-index: 3;
+  }
+
+  #imageBoxQuote {
+    margin: 0.5rem 0.1rem 0;
+    font-size: 0.75rem;
+    width: 90%;
+  }
+
+  #imageBoxHeader {
+    justify-content: center;
+    font-size: 1rem;
+  }
+
+  #imageBoxText {
+    width: 90%;
+    margin-top: 1rem;
+    font-size: 1rem;
+  }
+
+  #imageBoxButton {
+    z-index: 5;
+    margin: 1rem 0;
+    padding: 1rem;
+    display: flex;
+    background: rgb(217, 217, 217);
+    border-radius: 1rem;
+    box-shadow: 0 0.25rem 0.5rem rgb(0 0 0 / 0.5);
+    font-size: 0.75rem;
+  }
+
+  /*<---------------------------------------- MAIN ---------------------------------------->*/
+
+  main {
+    background: rgb(242, 237, 228);
+    display: flex;
+    justify-content: center;
+    min-height: 3rem;
+  }
+
+  #mainContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 3rem 0;
+    gap: 3rem;
+  }
+
+  .card {
+    display: flex;
+    width: 90%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5rem;
+    background: #5baf6b;
+    box-shadow: 0 0.5rem 2.5rem rgb(0 0 0 / 0.5);
+    overflow: hidden;
+  }
+
+  .card img {
+    overflow: hidden;
+    margin-top: -1rem;
+    width: 110%;
+    border-radius: 1rem;
+  }
+
+  .cardTextContainer {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0;
+    width: 75%;
+  }
+  .cardTextContainer h2 {
+    font-size: 1rem;
+    width: 100%;
+  }
+  .cardTextContainer p {
+    font-size: 1rem;
+    width: 100%;
+  }
+
+  /*<---------------------------------------- About page ---------------------------------------->*/
+
+  .aboutTextContainer {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #aboutHeader {
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  #aboutText {
+    text-align: start;
+    font-size: 1rem;
+  }
+
+  #aboutContactHeader {
+    font-size: 1.5rem;
+    margin: 1rem 0 1rem;
+    font-weight: 900;
+  }
+
+  #aboutContactText {
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  /*<---------------------------------------- Price calculator page ---------------------------------------->*/
+
+  .calculatorContainer {
+    display: flex;
+    gap: 1rem;
+    border-radius: 10px;
+    flex-direction: column;
+    background: #a9d4e8;
+    width: 90%;
+    margin: 0rem 0;
+  }
+
+  #calculatorHeader {
+    align-self: center;
+    font-size: 1rem;
+    margin: 1rem 0;
+  }
+
+  .calculatorCard {
+    display: flex;
+    flex-direction: column;
+    background-color: #6d6d6d;
+    border-radius: 1rem;
+    height: 7.5rem;
+    gap: 0.5rem;
+    align-items: center;
+    overflow: hidden;
+  }
+  .cardText {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    background-color: #5baf6b;
+    text-align: right;
+    height: 3rem;
+    width: 100%;
+  }
+  .cardTextArea {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  .cardTextArea input {
+    background: #5baf6b;
+    font-size: 1.25rem;
+    text-align: center;
+    border: none;
+    height: 100%;
+    width: 100%;
+  }
+
+  #calculatorOutput {
+    background: #5baf6b;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+  }
+
+  #calculatorTextContainer {
+    width: 90%;
+    font-size: 1rem;
+  }
+}
+
+/*
+<--------------------------------------------------------------------------------------------------->
+                                       Other Pages/General                                     
+<--------------------------------------------------------------------------------------------------->
+*/
+
+/*<---------------------------------------- Footer ---------------------------------------->*/
+
+footer {
+  position: relative;
+  justify-self: flex-end;
+  width: 100%;
+  height: 7.5rem;
+  justify-content: center;
+  align-content: center;
+  background: #2e5e3a;
+  top: 100%;
+}
+
+footer p {
+  font-size: 1.5rem;
+  text-align: center;
+}

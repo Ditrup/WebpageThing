@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="sv">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles/index.css">
+  <script src="./scripts/hamburger-menu.js"></script>
+  <title>Main Page</title>
+</head>
+
+<body>
+  <div id="wrap">
+    <!-------------------------------------------------HEADER------------------------------------------------->
+    <header>
+      <!---------------------------------------------HEADER MAIN--------------------------------------------->
+      <div id="headerMainContainer">
+        <div id="iconNameContainer">
+          <img src="./images/truckicon.png" alt="Company logo">
+        </div>
+        <div class="companyNameContainer">
+          <p>Grönfrakt AB</p>
+        </div>
+        <button onclick="clickFunction()" id="headerButton">
+          ≡
+        </button>
+      </div>
+      <!---------------------------------------------HEADER NAV--------------------------------------------->
+      <div id="headerNavBar">
+        <ol class="navList">
+          <li><a href="index.html">Hemsida</a></li>
+          <li><a href="price-calculator.html">Prisuträknare</a></li>
+          <li><a href="about.html">Om oss</a></li>
+        </ol>
+      </div>
+    </header>
+    <!--------------------------------------------------IMAGE BOX-------------------------------------------------->
+    <div id="imageBox">
+      <img class="mainImage bigImage" src="./images/whitetruck.webp" alt="">
+      <img class="mainImage smallImage" src="./images/truckroad.webp" alt="">
+      <div id="imageTextBox">
+        <p id="imageBoxQuote">"Grönfrakt AB – smarta leveranser för en grönare framtid."</p>
+        <h1 id="imageBoxHeader">Om oss:</h1>
+        <p id="imageBoxText">Vi är ett pålitligt fraktföretag som levererar trygg, snabb och effektiv transport för
+          företag och privatpersoner. Med moderna fordon, smart logistik och engagerad personal ser vi till att ditt
+          gods når fram säkert och i tid – varje gång. Vårt fokus är kvalitet, service och långsiktiga kundrelationer.
+        </p>
+        <a id="imageBoxButton" href="price-calculator.html">
+          Gå till prisuträkning
+        </a>
+      </div>
+      <div id="effectDiv"></div>
+    </div>
+    <!--------------------------------------------------MAIN-------------------------------------------------->
+    <main>
+      <div id="mainContainer">
+        <!-------------------------------------------------CARD 1------------------------------------------------->
+        <div class="card card1">
+          <img src="./images/twotrucks.webp" alt="">
+          <div class="cardTextContainer card1">
+            <h2>Vad vi gör:</h2>
+            <p>Grönfrakt AB erbjuder hållbara och effektiva transportlösningar för företag och privatpersoner. Vi
+              hanterar allt från mindre leveranser till större fraktuppdrag med fokus på punktlighet, säkerhet och
+              minskad miljöpåverkan. Med smart logistik och moderna fordon ser vi till att ditt gods kommer fram tryggt
+              – varje gång.</p>
+          </div>
+        </div>
+        <!-------------------------------------------------CARD 2------------------------------------------------->
+        <div class="card card2">
+          <img src="./images/bluetruck.webp" alt="">
+          <div class="cardTextContainer card2">
+            <h2>Grönfrakt AB i siffror:</h2>
+            <p>
+              • 5 000+ leveranser per månad<br>
+              • 98 % leveransprecision<br>
+              • 25 fordon i drift<br>
+              • 120+ företagskunder<br>
+              • 30% lägre CO₂-utsläpp genom miljöanpassade transporter
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-------------------------------------------------FOOTER------------------------------------------------->
+    <footer>
+      <p>©2026 Grönfrakt AB</p>
+    </footer>
+  </div>
+</body>
+
+</html>
